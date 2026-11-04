@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#03070b">
+  <meta name="description" content="NONONICK — Building the next digital experience.">
+  <title>NONONICK — Digital Experience Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="boot" class="boot-screen" aria-live="polite">
+    <div class="boot-mark">N<span>.</span></div><div class="boot-line"><i></i></div>
+    <p>INITIALIZING DIGITAL SPACE <span id="boot-percent">00</span></p>
+  </div>
+
+  <canvas id="world" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="NONONICK home">NONO<span>NICK</span><b>®</b></a>
+    <div class="top-meta"><span class="status-dot"></span> DIGITAL EXPERIENCE STUDIO</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <nav class="nav-overlay" id="nav-overlay" aria-label="Main navigation">
+    <a href="#home">01 / HOME</a><a href="#evolution">02 / EVOLUTION</a><a href="#intelligence">03 / INTELLIGENCE</a><a href="#experience">04 / EXPERIENCE</a>
+  </nav>
+
+  <main id="home">
+    <section class="scene hero" data-scene="0">
+      <div class="hero-kicker reveal"><span>INDEPENDENT DIGITAL STUDIO</span><span>EST. 2026 — EVERYWHERE</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A NEW DIMENSION OF THE DIGITAL</p>
+        <h1 class="hero-title"><span class="line">BEYOND</span><span class="line outline">THE SCREEN<span class="cyan">.</span></span></h1>
+        <p class="hero-sub reveal">Technology is not a destination.<br>It is a world waiting to be experienced.</p>
+      </div>
+      <div class="hero-bottom reveal"><span>SCROLL TO ENTER THE UNIVERSE</span><span class="scroll-cue"><i></i></span><span>01 — 05</span></div>
+      <div class="hero-side">NONONICK / DIGITAL FRONTIER</div>
+      <button class="skip-intro" id="skip-intro">SKIP INTRO <span>↗</span></button>
+    </section>
+
+    <section class="scene evolution" id="evolution" data-scene="1">
+      <div class="section-index reveal">02 / THE EVOLUTION</div>
+      <div class="evolution-copy">
+        <p class="eyebrow reveal">FROM CONNECTION TO COGNITION</p>
+        <h2 class="section-title reveal">EVERY ERA<br>REWRITES <span class="cyan">REALITY.</span></h2>
+        <p class="body-copy reveal">A continuous chain of breakthroughs. From the first connected machines to systems that learn, adapt, and create.</p>
+      </div>
+      <div class="era-list" id="era-list">
+        <div class="era active"><span>01</span><b>NETWORKS</b><small>THE FIRST CONNECTION</small></div>
+        <div class="era"><span>02</span><b>THE INTERNET</b><small>A WORLD INTERLINKED</small></div>
+        <div class="era"><span>03</span><b>CLOUD COMPUTING</b><small>COMPUTE WITHOUT BORDERS</small></div>
+        <div class="era"><span>04</span><b>ARTIFICIAL INTELLIGENCE</b><small>MACHINES THAT LEARN</small></div>
+        <div class="era"><span>05</span><b>HUMAN + MACHINE</b><small>THE NEXT INTERFACE</small></div>
+      </div>
+      <div class="evo-foot">THE MEDIUM CHANGES. THE POSSIBILITY EXPANDS.</div>
+    </section>
+
+    <section class="scene intelligence" id="intelligence" data-scene="2">
+      <div class="section-index reveal">03 / HUMAN × AI</div>
+      <div class="intelligence-center">
+        <p class="eyebrow reveal">A NEW KIND OF COLLABORATION</p>
+        <h2 class="intelligence-title reveal">HUMAN<br>INTELLIGENCE<br><span class="muted">MEETS</span><br>ARTIFICIAL<br><span class="cyan">INTELLIGENCE.</span></h2>
+        <p class="manifesto reveal">THE FUTURE IS BUILT,<br>NOT WAITED FOR.</p>
+      </div>
+      <div class="intelligence-coordinates">CO-CREATION / AUGMENTATION / POSSIBILITY</div>
+    </section>
+
+    <section class="scene transformation" data-scene="3">
+      <div class="transform-word">N</div>
+      <div class="transform-copy">
+        <p class="eyebrow">SIGNAL FOUND — IDENTITY RESOLVED</p>
+        <h2>NONONICK<span class="cyan">®</span></h2>
+        <p>DIGITAL EXPERIENCE STUDIO</p>
+      </div>
+      <div class="transform-bottom">FROM THE EDGE OF POSSIBILITY TO SOMETHING REAL.</div>
+    </section>
+
+    <section class="scene experience" id="experience" data-scene="4">
+      <div class="dashboard-head">
+        <div><p class="eyebrow">WELCOME TO THE NEXT LAYER</p><h2>THE DIGITAL<br><span class="cyan">WORKSPACE.</span></h2></div>
+        <div class="dashboard-note">A CURATED INDEX OF IDEAS,<br>TOOLS & EXPERIMENTS.<br><span>SELECT A SECTOR TO EXPLORE.</span></div>
+      </div>
+      <div class="dashboard-shell">
+        <div class="device-top"><span>NONONICK / SYSTEM INTERFACE</span><span class="device-live"><i></i> SYSTEM ONLINE</span><span>NX—01</span></div>
+        <div class="dashboard-grid" id="category-grid"></div>
+        <div class="device-bottom"><span>BUILDING THE NEXT DIGITAL EXPERIENCE</span><span id="project-count">0 PROJECTS INDEXED</span><span>© NONONICK 2026</span></div>
+      </div>
+      <div class="project-panel" id="project-panel" aria-live="polite">
+        <div class="panel-head"><div><span class="eyebrow" id="panel-eyebrow">SECTOR / 00</span><h3 id="panel-title">SELECT A SECTOR</h3></div><button id="panel-close" aria-label="Close projects panel">×</button></div>
+        <div class="project-list" id="project-list"><p class="empty-state">Choose a sector above to inspect its projects and experiments.</p></div>
+      </div>
+      <footer class="footer">
+        <div class="footer-brand">NONONICK<span>®</span></div>
+        <div class="footer-statement">DON’T JUST SCROLL A WEBSITE.<br><span>EXPERIENCE A DIGITAL WORLD.</span></div>
+        <div class="footer-links"><a href="#home">BACK TO TOP ↑</a><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="progress-rail" aria-hidden="true"><span id="progress-fill"></span></div>
+  <div class="progress-label"><span id="progress-number">01</span><span> / 05</span></div>
+  <div class="mobile-hint">SWIPE TO EXPLORE <span>↕</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

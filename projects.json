@@ -1,0 +1,48 @@
+{
+  "studio": "NONONICK",
+  "categories": [
+    {
+      "id": "ai",
+      "title": "AI & INTELLIGENCE",
+      "description": "INTELLIGENT SYSTEMS & AI"
+    },
+    {
+      "id": "web",
+      "title": "WEB APPLICATIONS",
+      "description": "INTERACTIVE PRODUCTS & PLATFORMS"
+    },
+    {
+      "id": "software",
+      "title": "SOFTWARE & TOOLS",
+      "description": "UTILITIES BUILT TO WORK"
+    },
+    {
+      "id": "digital",
+      "title": "DIGITAL EXPERIENCES",
+      "description": "IMMERSIVE INTERFACES"
+    },
+    {
+      "id": "experimental",
+      "title": "EXPERIMENTAL PROJECTS",
+      "description": "PROTOTYPES & NEW IDEAS"
+    },
+    {
+      "id": "research",
+      "title": "RESEARCH & DEVELOPMENT",
+      "description": "TESTING WHAT COMES NEXT"
+    },
+    {
+      "id": "about",
+      "title": "ABOUT NONONICK",
+      "description": "THE STUDIO & ITS APPROACH",
+      "emptyMessage": "Independent by design. Focused on building useful, thoughtful digital experiences."
+    },
+    {
+      "id": "contact",
+      "title": "CONTACT",
+      "description": "START A CONVERSATION",
+      "emptyMessage": "Add your preferred contact link as a project in projects.json (category: contact)."
+    }
+  ],
+  "projects": []
+}
